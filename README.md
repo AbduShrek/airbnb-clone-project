@@ -148,3 +148,11 @@ Caching: Use caching strategies to reduce database load and improve performance.
 
 
 Security is crucial to protect user data, prevent fraud, and ensure safe transactions.
+
+### 👨‍🔧 CI/CD Pipeline
+
+Definition: CI/CD pipelines automate testing, building, and deployment.
+
+Importance: Speeds up development, reduces errors, ensures consistency.
+
+Tools: GitHub Actions, Docker, other CI/CD platforms.
