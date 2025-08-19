@@ -25,3 +25,89 @@ The backend for the Airbnb Clone project is designed to provide a robust and sca
 * Database Administrator: Manages database design, indexing, and optimizations.
 * DevOps Engineer: Handles deployment, monitoring, and scaling of the backend services.
 * QA Engineer: Ensures the backend functionalities are thoroughly tested and meet quality standards.
+
+
+### Database Design
+#### Key Entities
+
+* Users
+
+id (UUID, PK)
+
+full_name (string)
+
+email (string, unique)
+
+password_hash (string)
+
+role (enum: guest, host, admin)
+
+created_at (timestamp)
+
+
+* Properties
+
+id (UUID, PK)
+
+host_id (UUID, FK → Users.id)
+
+title (string)
+
+address (string/json for geodata)
+
+price_per_night (decimal)
+
+max_guests (int)
+
+created_at (timestamp)
+
+
+* Bookings
+
+id (UUID, PK)
+
+property_id (UUID, FK → Properties.id)
+
+guest_id (UUID, FK → Users.id)
+
+check_in / check_out (date)
+
+total_price (decimal)
+
+status (enum: pending, confirmed, cancelled, completed)
+
+created_at (timestamp)
+
+
+* Reviews
+
+id (UUID, PK)
+
+property_id (UUID, FK → Properties.id)
+
+author_id (UUID, FK → Users.id)
+
+booking_id (UUID, FK → Bookings.id, nullable)
+
+rating (int 1–5)
+
+comment (text)
+
+created_at (timestamp)
+
+
+* Payments
+
+id (UUID, PK)
+
+booking_id (UUID, FK → Bookings.id)
+
+amount (decimal)
+
+currency (string, ISO 4217)
+
+status (enum: initiated, succeeded, failed, refunded)
+
+provider_charge_id (string)
+
+created_at (timestamp)
