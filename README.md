@@ -135,3 +135,16 @@ Features: Post and manage reviews for properties.
 7. Database Optimizations
 Indexing: Implement indexes for fast retrieval of frequently accessed data.
 Caching: Use caching strategies to reduce database load and improve performance.
+
+### 🔐 API Security
+
+* Authentication: Ensures only valid users can access the system.
+
+* Authorization: Controls what actions each user role can perform.
+
+* Rate Limiting: Prevents abuse by limiting requests.
+
+* Data Protection: Secures sensitive info like passwords & payments.
+
+
+Security is crucial to protect user data, prevent fraud, and ensure safe transactions.
