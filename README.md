@@ -112,7 +112,7 @@ provider_charge_id (string)
 
 created_at (timestamp)
 
-### 🛠️ Features Breakdown
+### 🛠️ Feature Breakdown
 1. API Documentation
 OpenAPI Standard: The backend APIs are documented using the OpenAPI standard to ensure clarity and ease of integration.
 Django REST Framework: Provides a comprehensive RESTful API for handling CRUD operations on user and property data.
